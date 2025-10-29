@@ -4,14 +4,6 @@
 //
 // Description:
 // Robotic arm with rotations
-//
-// base - scaled cube (obsidian)
-// joints - spheres with r=1 (chrome)
-// upper/fore arms - cylinders of length 4 and r=0.5
-// palm - cube of length 1
-// finger joints - spheres with r=0.15
-// finger digits - cylinders of length 0.5 and r=0.1
-//
 
 #include <iostream>
 #include <cmath>
@@ -319,7 +311,7 @@ void display()
             glTranslatef(0.0f, cfg::ARM_L - cfg::LINK_GAP(), 0.0f);
             glRotatef(elbow_pitch, 1.0f, 0.0f, 0.0f); // X
             glRotatef(elbow_yaw,   0.0f, 1.0f, 0.0f); // Y
-            glRotatef(elbow_roll,  0.0f, 0.0f, 1.0f); // Z  [ADDED]
+            glRotatef(elbow_roll,  0.0f, 0.0f, 1.0f); // Z
 
             draw_joint(cfg::JOINT_R);
 
