@@ -29,6 +29,15 @@ void mygllib::Keyboard::keyboard(unsigned char key, int w, int h)
         case 'F': view.zFar() += 0.1; break;
     }
 
+    // clamp values
+    if (view.fovy() < 15.0f)  view.fovy() = 15.f;
+    if (view.fovy() > 120.0f) view.fovy() = 120.f;
+
+    if (view.aspect() < 0.1f) view.aspect() = 0.1f;
+
+    if (view.zNear() < 1e-4f) view.zNear() = 1e-4f;
+    if (view.zFar()  < view.zNear() * 10.f) view.zFar() = view.zNear() * 10.f;
+
     view.set_projection();
     view.lookat();
     //light.set_position();

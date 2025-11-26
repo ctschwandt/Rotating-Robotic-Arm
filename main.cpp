@@ -291,7 +291,7 @@ void display()
     {
         glRotatef(shoulder_pitch, 1.0f, 0.0f, 0.0f); // X
         glRotatef(shoulder_yaw,   0.0f, 1.0f, 0.0f); // Y
-        glRotatef(shoulder_roll,  0.0f, 0.0f, 1.0f); // Z  [ADDED]
+        glRotatef(shoulder_roll,  0.0f, 0.0f, 1.0f); // Z
 
         draw_joint(cfg::JOINT_R);
  
